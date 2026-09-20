@@ -1,0 +1,5 @@
+#Request
+---
+#Response
+float32 battery_percent
+bool ready_for_task

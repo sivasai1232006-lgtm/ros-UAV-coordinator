@@ -1,0 +1,19 @@
+{
+    "cmake.sourceDirectory": "/home/siva/ros2_drones/src/drone_interfaces",
+    "python.autoComplete.extraPaths": [
+        "/home/siva/ros2_action/install/actions_py/lib/python3.10/site-packages",
+        "/home/siva/ros2_action/install/my_robot_interfaces/local/lib/python3.10/dist-packages",
+        "/home/siva/ros2_ws/build/robot_controller",
+        "/home/siva/ros2_ws/install/robot_controller/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/siva/ros2_action/install/actions_py/lib/python3.10/site-packages",
+        "/home/siva/ros2_action/install/my_robot_interfaces/local/lib/python3.10/dist-packages",
+        "/home/siva/ros2_ws/build/robot_controller",
+        "/home/siva/ros2_ws/install/robot_controller/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
