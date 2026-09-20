@@ -28,38 +28,7 @@ src/
     └── action/
         └── GoToWaypoint.action
 ```
-## Useful ROS 2 Commands
 
-Inspect active nodes:
-
-```bash
-ros2 node list
-```
-
-Inspect topics:
-
-```bash
-ros2 topic list
-ros2 topic echo /uav1/status
-ros2 topic echo /uav2/status
-```
-
-Inspect services:
-
-```bash
-ros2 service list
-```
-
-Inspect actions:
-
-```bash
-ros2 action list
-```
-
-Run individual nodes if required:
-
-```bash
-ros2 run drone
 
 ## Features
 
@@ -210,7 +179,38 @@ You should see logs showing:
 5. UAVs report arrival and battery consumption.
 6. The Safety Monitor warns if the UAVs come within `3.0` coordinate units.
 
-_controller uav1_node
+## Useful ROS 2 Commands
+
+Inspect active nodes:
+
+```bash
+ros2 node list
+```
+
+Inspect topics:
+
+```bash
+ros2 topic list
+ros2 topic echo /uav1/status
+ros2 topic echo /uav2/status
+```
+
+Inspect services:
+
+```bash
+ros2 service list
+```
+
+Inspect actions:
+
+```bash
+ros2 action list
+```
+
+Run individual nodes if required:
+
+```bash
+ros2 run drone_controller uav1_node
 ros2 run drone_controller uav2_node
 ros2 run drone_controller safety_monitor
 ros2 run drone_controller coordinator
