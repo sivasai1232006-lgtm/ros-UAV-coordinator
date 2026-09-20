@@ -4,6 +4,63 @@ A ROS 2 project demonstrating coordination between two UAV nodes using services 
 
 > **Note:** This project is a ROS 2 software simulation. UAV positions are represented internally as 2D `(x, y)` coordinates; no Gazebo or physical flight controller is used by the provided code.
 
+## Project Structure
+
+```text
+src/
+├── drone_controller/
+│   ├── drone_controller/
+│   │   ├── uav1_node.py
+│   │   ├── uav2_node.py
+│   │   ├── coordinator.py
+│   │   └── safety_monitor.py
+│   ├── launch/
+│   │   └── drone_system.launch.py
+│   ├── package.xml
+│   ├── setup.py
+│   └── setup.cfg
+│
+└── drone_interfaces/
+    ├── msg/
+    │   └── UavStatus.msg
+    ├── srv/
+    │   └── CheckBattery.srv
+    └── action/
+        └── GoToWaypoint.action
+```
+## Useful ROS 2 Commands
+
+Inspect active nodes:
+
+```bash
+ros2 node list
+```
+
+Inspect topics:
+
+```bash
+ros2 topic list
+ros2 topic echo /uav1/status
+ros2 topic echo /uav2/status
+```
+
+Inspect services:
+
+```bash
+ros2 service list
+```
+
+Inspect actions:
+
+```bash
+ros2 action list
+```
+
+Run individual nodes if required:
+
+```bash
+ros2 run drone
+
 ## Features
 
 * Two independent UAV nodes: `uav1` and `uav2`
@@ -153,64 +210,8 @@ You should see logs showing:
 5. UAVs report arrival and battery consumption.
 6. The Safety Monitor warns if the UAVs come within `3.0` coordinate units.
 
-## Useful ROS 2 Commands
-
-Inspect active nodes:
-
-```bash
-ros2 node list
-```
-
-Inspect topics:
-
-```bash
-ros2 topic list
-ros2 topic echo /uav1/status
-ros2 topic echo /uav2/status
-```
-
-Inspect services:
-
-```bash
-ros2 service list
-```
-
-Inspect actions:
-
-```bash
-ros2 action list
-```
-
-Run individual nodes if required:
-
-```bash
-ros2 run drone_controller uav1_node
+_controller uav1_node
 ros2 run drone_controller uav2_node
 ros2 run drone_controller safety_monitor
 ros2 run drone_controller coordinator
-```
-
-## Project Structure
-
-```text
-src/
-├── drone_controller/
-│   ├── drone_controller/
-│   │   ├── uav1_node.py
-│   │   ├── uav2_node.py
-│   │   ├── coordinator.py
-│   │   └── safety_monitor.py
-│   ├── launch/
-│   │   └── drone_system.launch.py
-│   ├── package.xml
-│   ├── setup.py
-│   └── setup.cfg
-│
-└── drone_interfaces/
-    ├── msg/
-    │   └── UavStatus.msg
-    ├── srv/
-    │   └── CheckBattery.srv
-    └── action/
-        └── GoToWaypoint.action
 ```
