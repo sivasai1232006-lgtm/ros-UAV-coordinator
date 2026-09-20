@@ -112,7 +112,7 @@ Clone the repository into a ROS 2 workspace:
 mkdir -p ~/uav_ws/src
 cd ~/uav_ws/src
 
-git clone <repository-url>
+git clone https://github.com/sivasai1232006-lgtm/ros-UAV-coordinator.git
 ```
 
 The workspace should contain both packages:
